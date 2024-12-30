@@ -8,6 +8,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   vania: ^0.6.2
+  dart_frog: ^0.0.1-dev
 
 
 dev_dependencies:

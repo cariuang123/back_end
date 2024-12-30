@@ -8,6 +8,8 @@ import 'cretae_orders_table.dart';
 import 'cretae_ordeiters_table.dart';
 import 'cretae_productnotes_table.dart';
 import 'cretae_vendors_table.dart';
+import 'create_waste_points_table.dart';
+import 'create_pickup_requests_table.dart';
 
 void main(List<String> args) async {
   await MigrationConnection().setup();
@@ -31,6 +33,8 @@ class Migrate {
     await CretaeVendorsTable().up();
     await CreatePersonalAccessTokensTable().up();
     await CreateUserTable().up();
+    await CreateWastePointsTable().up();
+    await CreatePickupRequestsTable().up();
 
 	}
 
@@ -44,5 +48,7 @@ class Migrate {
     await CreateUserTable().down();
     await CreatePersonalAccessTokensTable().down();
     await CreateUserTable().down();
+    await CreateWastePointsTable().down();
+    await CreatePickupRequestsTable().down();
 	 }
 }
